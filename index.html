@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Multi Step Form</title>
+</head>
+<body>
+    <h1>REGISTER INFORMATION</h1>
+    <form action="" id="form">
+        <div class="container">
+            <div class="steps">
+                <span class="step">1</span>
+                <hr>
+                <span class="step">2</span>
+                <hr>
+                <span class="step">3</span>
+                <hr>
+                <span class="step">4</span>
+            </div>
+            
+            <div class="tabs">
+                <input type="text" class="name" placeholder="Name">
+                <input type="text" class="firstName" placeholder="First Name">
+            </div>
+
+            <div class="tabs">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+
+            <div class="tabs">
+                <p>How did you learn about our website?</p>
+                <div class="checkbox">
+                    <input type="checkbox" name="friends" id="friends">
+                    <label for="friends">Friends</label> 
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" name="socials" id="socials">
+                    <label for="socials">Socials</label> 
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="forums" id="forums">
+                    <label for="forums">Forums</label>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <h2>Thank you for your submission!</h2>
+            </div>
+        </div>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>
