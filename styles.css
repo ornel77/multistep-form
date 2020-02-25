@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(51,10,70);
+    background: linear-gradient(157deg, rgba(136,58,172,1) 0%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%) no-repeat center center/cover;
+    height: 100vh;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 20px ;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    background: #fff;
+    margin: 10px auto;
+    border-radius: 2px;
+    padding: 30px;
+    height: 70vh;
+}
+
+/* ---------------------------------- STEPS --------------------------------- */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.steps .step {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.steps .step .line-between {
+    /* border-bottom: 6px solid black; */
+}
