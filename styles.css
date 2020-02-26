@@ -22,24 +22,56 @@ h1 {
     max-width: 1100px;
     background: #fff;
     margin: 10px auto;
-    border-radius: 2px;
-    padding: 30px;
+    border-radius: 6px;
+    padding: 30px 60px;
     height: 70vh;
 }
 
 /* ---------------------------------- STEPS --------------------------------- */
 .steps {
     display: flex;
-    justify-content: space-between;
-    margin: 10px;
+    justify-content: center;
+    margin: 10px auto;
 }
 
 .steps .step {
     display: flex;
-    flex-direction: column;
-    
+    /* justify-content: ; */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.steps .step .step-number {
+    width: 10px;
+    height: 10px;
+    padding: 20px;
+    /* background-color:rgb(136, 92, 156); */
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.steps .step .step-number p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transform: translateY(-10px);
 }
 
 .steps .step .line-between {
-    /* border-bottom: 6px solid black; */
+    
+    border-bottom: 2px solid black;
+    width: 12vw;
+    margin: 0 auto;
+}
+.steps .step:last-child {
+    width: 0;
+    margin-right: 20px;
+
+}
+
+.steps .step .line-between:last-child {
 }
