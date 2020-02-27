@@ -10,32 +10,31 @@
     <h1>REGISTER INFORMATION</h1>
     <form action="" id="form">
         <div class="container">
-
             <!-- STEPS NUMBER -->
             <div class="steps">
                 <div class="step">
-                    <div class="step-number">
+                    <div data-number class="step-number">
                         <p>1</p>
                     </div>
                     <div class="line-between"></div>
                 </div>
                 
                 <div class="step">
-                    <div class="step-number active">
+                    <div data-number class="step-number">
                         <p>2</p>
                     </div>
                     <div class="line-between"></div>
                 </div>
                 
                 <div class="step">
-                    <div class="step-number">
+                    <div data-number class="step-number">
                         <p>3</p>
                     </div>
                     <div class="line-between"></div>
                 </div>
                 
                 <div class="step">
-                    <div class="step-number">
+                    <div data-number class="step-number">
                         <p>4</p>
                     </div>
                     <div class="line-between" style="display: none;"></div>
@@ -43,17 +42,17 @@
             </div>
 
             <!-- TABS -->
-            <div class="tabs invisible">
+            <div class="tabs" data-tabs>
                 <input type="text" class="name" placeholder="Name">
                 <input type="text" class="firstName" placeholder="First Name">
             </div>
 
-            <div class="tabs invisible">
+            <div class="tabs" data-tabs>
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
             </div>
 
-            <div class="tabs invisible">
+            <div class="tabs" data-tabs>
                 <p>How did you learn about our website?</p>
                 <div class="checkbox">
                     <input type="checkbox" name="friends" id="friends">
@@ -70,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="tabs">
+            <div class="tabs" data-tabs>
                 <h2>Thank you for your submission!</h2>
             </div>
 

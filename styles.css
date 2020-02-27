@@ -140,7 +140,7 @@ h1 {
     border-radius: 10px;
     cursor: pointer;
     color: #eee;
-
+    outline: none;
 }
 
 .buttons .btn:hover {
