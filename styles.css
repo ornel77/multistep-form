@@ -40,7 +40,7 @@ h1 {
 }
 
 .visible {
-    display: block;
+    display: block !important;
 }
 
 /* ---------------------------------- STEPS --------------------------------- */
@@ -96,6 +96,7 @@ h1 {
     margin: 70px auto;
     /* width: 100%; */
     text-align: center;
+    display: none;
 }
 
 .tabs input[type='text'],
