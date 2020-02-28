@@ -9,7 +9,7 @@ const steps = document.querySelectorAll('[data-number]')
 const stepNumbersArr = [].slice.call(stepNumbers)
 
 /* ---------------------------- FUNCTION HANDLER ---------------------------- */
-let index = 0
+let numIndex = 0
 let tabIndex = 0
 
 /* NEXT STEP FUNCTION */
@@ -17,46 +17,53 @@ const nextStep = (e) => {
     e.preventDefault()
     
     //NUMBER
-    if(steps[index].classList.contains('active')) {
-        steps[index].classList.remove('active')
-        steps[index+1].classList.add('active')
+    if(steps[numIndex].classList.contains('active')) {
+        steps[numIndex].classList.remove('active')
+        steps[numIndex+1].classList.add('active')
         prev.style.display = 'block'
-        index++
-    }
-    let lastElmt = steps[steps.length-1]
-    if(steps[index] === lastElmt) {
-        next.disabled = true
-        next.style.backgroundColor = 'grey'
-        next.style.cursor= 'initial'
+        numIndex++
+        console.log(numIndex);
     }
 
     //TAB
     if(tabs[tabIndex].classList.contains('visible')) {
-        console.log('hello');
         tabs[tabIndex].classList.remove('visible')
         tabs[tabIndex+1].classList.add('visible')
         tabIndex++
+        console.log(tabIndex);
+    }
+
+    //next button disabled
+    let lastElmtStep = steps[steps.length-1]
+    let lastElmtTabs = tabs[tabs.length-1]
+    if((steps[numIndex] === lastElmtStep) && (tabs[tabIndex] === lastElmtTabs) ) {
+        next.style.display = 'none'
     }
 }
+
+
 /* PREV STEP FUNCTION */
-let prevNumIndex = 0
-let prevTabIndex = 0
 const prevStep = e => {
     e.preventDefault()
     //NUMBER
-    if(steps[index].classList.contains('active')) {
-        steps[index].classList.remove('active')
-        steps[index-1].classList.add('active')
+    if(steps[numIndex].classList.contains('active')) {
+        steps[numIndex].classList.remove('active')
+        steps[numIndex-1].classList.add('active')
         prev.style.display = 'block'
-        index--
+        next.style.display = 'block'
+        numIndex--
+    }
+
+    if(tabs[tabIndex].classList.contains('visible')) {
+        tabs[tabIndex].classList.remove('visible')
+        tabs[tabIndex-1].classList.add('visible')
+        prev.style.display = 'block'
+        next.style.display = 'block'
+        tabIndex--
     }
 
     let firstElmt = steps[0]
-    if(steps[index] === firstElmt) {
-        // next.disabled = false
-        // next.style.backgroundColor = 'initial'
-        // next.style.cursor= 'pointer'
-
+    if(steps[numIndex] === firstElmt) {
         prev.style.display = 'none'
     }
 }
@@ -73,7 +80,7 @@ window.onload = () => {
 
 }
 
-/* ONCLICK NEXT */
+/* ONCLICK NEXT and PREV */
 next.addEventListener('click', nextStep)
 prev.addEventListener('click', prevStep)
 
